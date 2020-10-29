@@ -33,6 +33,6 @@ app.use((err, req, res, next) => {
   });
 });
 
-app.listen(CONFIG.PORT || 3000, "0.0.0.0", () => {
-  console.log(`Server started on port ${CONFIG.PORT || 3000}`);
+app.listen(CONFIG.APP.PORT || 3000, "0.0.0.0", () => {
+  console.log(`Server started on port ${CONFIG.APP.PORT || 3000}`);
 });
