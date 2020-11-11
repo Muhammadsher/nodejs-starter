@@ -13,7 +13,10 @@ app.use(bodyParser.json());
 /**
  * @description middleware, req.pool will be available in each route
  */
-app.use((req, res) => (req.pool = pool));
+app.use((req, res, next) => {
+  req.pool = pool;
+  next();
+});
 
 app.use("/", model);
 
